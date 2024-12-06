@@ -13,6 +13,10 @@ var DeleteByCode_1 = require("./modules/list/DeleteByCode");
 var GetListsByCode_1 = require("./modules/list/GetListsByCode");
 var RegisterUser_1 = require("./modules/normal/RegisterUser");
 var GetAllUsers_1 = require("./modules/normal/GetAllUsers");
+var InsertTask_1 = require("./modules/todo/InsertTask");
+var GetAllTasks_1 = require("./modules/todo/GetAllTasks");
+var UpdateStatus_1 = require("./modules/todo/UpdateStatus");
+var DeleteTasks_1 = require("./modules/todo/DeleteTasks");
 //Create a REST object
 var app = express();
 //To parse the data
@@ -29,6 +33,10 @@ app.use("/deleteListByCode", DeleteByCode_1.default);
 app.use("/getListsByCode", GetListsByCode_1.default);
 app.use("/registerUsers", RegisterUser_1.default);
 app.use("/getAllUsers", GetAllUsers_1.default);
+app.use("/insertTask", InsertTask_1.default);
+app.use("/getAllTasks", GetAllTasks_1.default);
+app.use("/updateStatus", UpdateStatus_1.default);
+app.use("/deleteTasks", DeleteTasks_1.default);
 //Create a const port number
 var PORT = 4040;
 //start the server
